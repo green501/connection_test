@@ -12,7 +12,7 @@
 		<input type="text" name="id">
 		<input type="password" name="passwd">
 		<input type="submit">
-		<input type="button" value="비회원 로그인" onClick="">
+		<input type="button" value="비회원 로그인" onClick="location.href='geustLogin'">
 	</form>
 </body>
 </html>

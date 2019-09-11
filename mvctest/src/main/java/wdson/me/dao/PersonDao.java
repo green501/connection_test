@@ -18,7 +18,7 @@ public class PersonDao {
 		this.jdbcTemplate = new JdbcTemplate(datasource);
 	}
 
-	public Person selectById(String name) {
+	public List<Person> selectById(String name) {
 
 		String sql = "select * from Person where pid = ?";
 
@@ -28,7 +28,7 @@ public class PersonDao {
 			}
 		};
 		
-		Person results = (Person)jdbcTemplate.query(sql, rm, new Object[] { name });
+		List<Person> results = (List<Person>) jdbcTemplate.query(sql, rm, new Object[] { name });
 
 		return results;
 	}

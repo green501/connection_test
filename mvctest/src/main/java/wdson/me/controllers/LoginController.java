@@ -32,13 +32,25 @@ public class LoginController {
 			
 		PersonDao dao = new PersonDao(dataSource);
 		
-		if(dao.selectById(param.get("id")).getPpw().equals(param.get("pw"))){
+		if(dao.selectById(param.get("id")).get(0).getPpw().equals(param.get("passwd"))){
+			
 			return "loginSuccess";
 		}
-		
-		model.addAttribute("Person", dao.selectById("geust"));
+
 		model.addAttribute("loginFailed", true);
+		return "home";
+	}
+	
+	@RequestMapping(value = "geustLogin", method = RequestMethod.GET)
+	public String guestLogin(@RequestParam Map<String, String> param, Model model) {
+			
+		PersonDao dao = new PersonDao(dataSource);
 		
+		if(dao.selectById("guest").get(0).getPpw().equals("1234")){
+			return "loginSuccess";
+		}
+
+		model.addAttribute("loginFailed", true);
 		return "home";
 	}
 }

@@ -22,7 +22,9 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="wdson.me.controllers" />
-	
+	<context:component-scan base-package="wdson.me.dao" />
+	<context:component-scan base-package="wdson.me.domain" />
+	<context:component-scan base-package="wdson.me.service" />
 	
 	
 </beans:beans>

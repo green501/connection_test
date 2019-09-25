@@ -4,9 +4,9 @@
 	"http://mybatis.org/dtd/mybatis-3-config.dtd">
 	<configuration>
 	
-		<typeAliases>
-			<typeAlias type="com.example.dto.MemberVO" alias="memberVO"/>
-		</typeAliases>
-		
+    <typeAliases>
+        <package name="wdson.me.domain"/>
+    </typeAliases>
+ 
 	</configuration>
 	

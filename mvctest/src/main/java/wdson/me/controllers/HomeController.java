@@ -31,7 +31,6 @@ public class HomeController {
 
 		try {
 			model.addAttribute("question", service.getTodayQuestion());
-			System.out.println(service.getTodayQuestion().getQ_q());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

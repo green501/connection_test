@@ -6,15 +6,18 @@ public class QuestionVO {
 	
 	Date q_d;
 	String q_q;
-	int q_a;
+	String q_a;
+	String q_i;
 	
 	public QuestionVO() {
 	}
 	
-	public QuestionVO(Date q_d, String q_q, int q_a) {
+	public QuestionVO(Date q_d, String q_q, String q_a, String q_i) {
+		super();
 		this.q_d = q_d;
 		this.q_q = q_q;
 		this.q_a = q_a;
+		this.q_i = q_i;
 	}
 
 	public Date getQ_d() {
@@ -33,13 +36,22 @@ public class QuestionVO {
 		this.q_q = q_q;
 	}
 
-	public int getQ_a() {
+	public String getQ_a() {
 		return q_a;
 	}
 
-	public void setQ_a(int q_a) {
+	public void setQ_a(String q_a) {
 		this.q_a = q_a;
 	}
+
+	public String getQ_i() {
+		return q_i;
+	}
+
+	public void setQ_i(String q_i) {
+		this.q_i = q_i;
+	}
+	
 	
 }
 

@@ -26,7 +26,7 @@ h2 {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
-p {
+p, pre {
 
 	text-indent: 50px;
 	text-align: justify;
@@ -38,6 +38,17 @@ a {
 	text-decoration: none;
 	color: #008CBA;
 }
+
+img {
+	boder: 3px solid black;
+	width: 480px;
+	height: 640px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+
 </style>
 
 <meta charset="UTF-8">
@@ -50,6 +61,7 @@ a {
   <h1><fmt:formatDate var="resultRegDt" value="${question.q_d}" pattern="yyyy-MM-dd"/>
 ${resultRegDt} (TODAY'S QUIZ)</h1>
   <p>${question.q_q}</p>
+  <img src="http://wdson.me/quiz/${question.q_i}.jpeg">
 </div>
 </body>
 </html>

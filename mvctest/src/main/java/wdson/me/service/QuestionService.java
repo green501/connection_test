@@ -13,7 +13,7 @@ public class QuestionService {
 	@Inject
 	private QuestionDAO dao;
 	
-	public QuestionVO getTodayQuestion() throws Exception{
-		return dao.getTodayQuestion();
+	public QuestionVO getTodayQuestion(Integer day) throws Exception{
+		return dao.getTodayQuestion(day);
 	};
 }

@@ -9,7 +9,7 @@
     <select id="getTodayQuestion" resultType="QuestionVO">
   		select * from hr
     	<where>
-    		q_d = CURDATE();
+    		 q_d = DATE_ADD(CURDATE(), INTERVAL #{day} DAY);
     	</where>
     </select>
  
